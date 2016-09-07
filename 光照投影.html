@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>张敏</title>
+	<link href="" rel="stylesheet">
+<style>
+	*{
+		padding:0;	
+		margin:0;
+	}
+	.sun{
+		width:100px;
+		height:100px;
+		background:#fc3;
+		border-radius:50%;
+		box-shadow:0 0 100px #ff0;
+		position:absolute; top:0; left:0;
+	}
+	.content{ 
+		height:200px; 
+		font-size:30px; 
+		text-align:center; 
+		margin-top:200px; 
+		font-weight:bold;
+	    text-shadow:0 0 0 #000;
+	 }
+</style>
+<script>
+	window.onload=function(){
+		var oSun=document.querySelector('.sun');
+		var oCon=document.querySelector('.content');
+		document.onmousemove=function(ev){
+			oSun.style.left=ev.pageX-oSun.offsetWidth/2+'px';
+			oSun.style.top=ev.pageY-oSun.offsetHeight/2+'px';
+			var x=oCon.offsetLeft+oCon.offsetWidth/2-ev.pageX;
+			var y=oCon.offsetTop+oCon.offsetHeight/2-ev.pageY;
+			var dis=Math.sqrt(x*x+y*y);
+			oCon.style.textShadow=x/3+'px '+y/3+'px '+dis/10+'px  #000'; 
+		};
+	};
+</script>
+</head>
+
+<body>
+	<div class="sun"></div>
+	<p class="content">智能社智能社智能社智能社智能社智能社智能社智<br>能社智能社智能社智能社智能社智能社智能社智能社智<br>
+	能社智能社智能社智能社智能社智能社智能社智能社智能社智能社<br>智能社智能社智能社智能社智能社智能社智能社智能社智能社<br>智能社智能社智能社智能社智能社智能社智能社智能社智能社智能社<br>智能社智能社智能社智能社智能社智能社智能社智能社智能社智能社<br>智能社智能社智能社智能社智能社智能社智能社智能社智能社<br>智能社智能社智能社智能社智能社智能社智能社智能社智能社智能</p> 
+</body>
+</html>
